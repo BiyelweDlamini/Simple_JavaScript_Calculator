@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Biyelwe's Calculator</title>
+        <style>
+            .header
+            {
+                text-align: center;
+
+            }
+            #heading2 {
+              font-family: 'Lucida Handwriting', cursive;
+              color: white;
+             }
+            #displayLb{
+              font-family: 'Lucida Handwriting', cursive;
+              color: white;
+            }
+
+            #myDisplay{
+                border-width: 9px;
+                border-color: rgb(67, 65, 65);
+                border-radius: 12px;
+            }
+            .btn-group button{
+                background-color: blue;
+                font-family: 'Lucida Handwritting', cursive;
+                align-content: center;
+                align-self: center;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                border-radius: 12px;
+
+            }
+
+            .btn-group button :hover{
+                background-color: aqua;
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="header" id="myDiv">
+
+            <!--My Display Boxes-->
+
+            <!--Heading of the webpage-->
+            <h2 id="heading2">Biyelwe Calculator</h2>
+
+            <h3 id="heading2">Input two numbers and choose the mathematical function you want to apply to them</h3>
+
+            <!--Input textboxes and their labels-->
+
+            <label id="displayLb" for="variable1">VARIABLE ONE</label>
+            <input type="text" id="variable1" name="variable1">
+
+            <label id="displayLb" for="variable2">VARIABLE TWO</label>
+            <input type="text" id="variable2" name="variable2">
+
+            <br>
+
+            <!--A group of buttons-->
+
+            <div class="btn-group">
+                <button onclick="addition()">ADD</button>
+                <button onclick="subtration()">SUBTRACT</button>
+                <button onclick="multiplication()">MULTIPLY</button>
+                <button onclick="division()">DIVIDE</button>
+                <button>CLEAR</button>
+            </div>
+
+            <!--A text box to output the values from the two textboxes after they have been calculated using any of the buttons in the group of buttons-->
+
+            <input type="text" id="output" name="output" readonly>
+
+        </div>
+       
+
+
+    <script>
+
+
+
+      // function to add two numbers into one
+
+      function addition(){
+
+         //variables to store the values from the two textboxes with names "variable1" and "variable2" respectively.
+     
+        var input1 = document.getElementById("variable1").value;
+        var input2 = document.getElementById("variable2").value;
+
+        //variables to convert the variables in the textboxes into numbers then store them.
+
+        var num1 = Number(input1);
+        var num2 = Number(input2);
+
+
+        document.getElementById("output").value = num1 + num2;
+      } 
+
+      //function to multiply two numbers
+      
+      function multiplication(){
+         
+        //variables to store the values from the two textboxes with names "variable1" and "variable2" respectively.
+     
+        var input1 = document.getElementById("variable1").value;
+        var input2 = document.getElementById("variable2").value;
+
+        //variables to convert the variables in the textboxes into numbers then store them.
+        
+        var num1 = Number(input1);
+        var num2 = Number(input2);
+
+        document.getElementById("output").value = num1 * num2;
+      } 
+
+      // function to divide one number with another number
+      
+      function division(){
+        
+        //variables to store the values from the two textboxes with names "variable1" and "variable2" respectively.
+     
+        var input1 = document.getElementById("variable1").value;
+        var input2 = document.getElementById("variable2").value;
+
+        //variables to convert the variables in the textboxes into numbers then store them.
+        
+        var num1 = Number(input1);
+        var num2 = Number(input2);
+
+        document.getElementById("output").value = num1 / num2;
+      } 
+
+      //function to subtract one number from another number
+
+      function subtration (){
+
+        //variables to store the values from the two textboxes with names "variable1" and "variable2" respectively.
+     
+        var input1 = document.getElementById("variable1").value;
+        var input2 = document.getElementById("variable2").value;
+
+        //variables to convert the variables in the textboxes into numbers then store them.
+        
+        var num1 = Number(input1);
+        var num2 = Number(input2);
+
+        document.getElementById("output").value = num1 - num2;
+      } 
+
+      function clear(){
+
+         //variables to store the values from the two textboxes with names "variable1" and "variable2" respectively.
+     
+         var input1 = document.getElementById("variable1").value;
+        var input2 = document.getElementById("variable2").value;
+
+        //variables to convert the variables in the textboxes into numbers then store them.
+        
+        var num1 = Number(input1);
+        var num2 = Number(input2);
+
+        document.getElementById("variable1") = " ";
+        document.getElementById("variable2") = " ";
+        document.getElementById("output") = " ";
+      }
+
+    </script>
+    </body>
+</html>
