@@ -67,7 +67,7 @@
                 <button onclick="subtration()">SUBTRACT</button>
                 <button onclick="multiplication()">MULTIPLY</button>
                 <button onclick="division()">DIVIDE</button>
-                <button>CLEAR</button>
+                <button onclick="clear()">CLEAR</button>
             </div>
 
             <!--A text box to output the values from the two textboxes after they have been calculated using any of the buttons in the group of buttons-->
@@ -76,7 +76,7 @@
 
         </div>
        
-
+    <!--Scirpt section begins-->
 
     <script>
 
@@ -155,17 +155,19 @@
 
          //variables to store the values from the two textboxes with names "variable1" and "variable2" respectively.
      
-         var input1 = document.getElementById("variable1").value;
-        var input2 = document.getElementById("variable2").value;
+        //var input1 = document.getElementById("variable1").value;
+        //var input2 = document.getElementById("variable2").value;
 
         //variables to convert the variables in the textboxes into numbers then store them.
         
-        var num1 = Number(input1);
-        var num2 = Number(input2);
+        //var num1 = Number(input1);
+        //var num2 = Number(input2);
 
-        document.getElementById("variable1") = " ";
-        document.getElementById("variable2") = " ";
-        document.getElementById("output") = " ";
+        document.getElementById("variable1").value = ""; // remember to use an empty string, it is different from adding a space in between the quotes
+        document.getElementById("variable2").value = "";
+        document.getElementById("output").value = "";
+
+        console.log("Function is being called")
       }
 
     </script>
